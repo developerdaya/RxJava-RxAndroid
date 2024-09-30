@@ -157,8 +157,6 @@ override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int
 
 The way the code is currently written will lead to issues because `dataList.value?.add(query)` modifies the list that is inside the `BehaviorSubject`, but it does not affect the `currentList` that you use for emitting with `onNext`. 
 
-### Corrected Code Example
-
 Here’s how to properly add the new query to the list and emit it:
 
 ```kotlin
